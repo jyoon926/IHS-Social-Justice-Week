@@ -8,6 +8,7 @@
 html {
   overflow-x: hidden;
   font-size: 18px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -16,10 +17,9 @@ body {
 
 .button {
   color: #8EAAD0;
-  padding-bottom: 2px;
-  font-size: 1em;
   background: black;
-  padding: 20px 30px;
+  padding: 15px 30px;
+  font-size: 1em;
   -webkit-transition-duration: 400ms;
           transition-duration: 400ms;
 }
@@ -40,9 +40,11 @@ body {
   -webkit-transition-timing-function: cubic-bezier(0.08, 0.35, 0.16, 1.02);
           transition-timing-function: cubic-bezier(0.08, 0.35, 0.16, 1.02);
   pointer-events: none;
+  z-index: 101;
 }
 
 #header {
+  z-index: 100;
   position: fixed;
   top: 0;
   left: 0;
@@ -116,18 +118,18 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: vertical;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: -webkit-gradient(linear, right bottom, left top, from(#6D819B), to(#8EAAD0));
-  background: linear-gradient(to top left, #6D819B, #8EAAD0);
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: -webkit-gradient(linear, left top, right top, from(#6D819B), to(#89a4c9));
+  background: linear-gradient(to right, #6D819B, #89a4c9);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-left: 12.5vw;
+  padding-left: 0 12.5vw;
 }
 
 .hero .text {
@@ -146,25 +148,135 @@ body {
           flex-direction: column;
 }
 
-.hero h3, .hero h2 {
+.hero .text h3, .hero .text h2 {
   width: calc((100vw / 8) * 3);
 }
 
-.hero h3 {
+.hero .text h3 {
   font-size: 2em;
   font-weight: 400;
   line-height: 1;
   margin-bottom: 40px;
 }
 
-.hero h2 {
+.hero .text h2 {
   font-size: 5em;
   line-height: 1;
   font-weight: 600;
   margin-bottom: 40px;
 }
 
-section {
-  height: 100vh;
+.hero .img {
+  height: 25vw;
+  width: 25vw;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left bottom, right top, from(#f5c9d2), to(#d4999e));
+  background: linear-gradient(to top right, #f5c9d2, #d4999e);
+  margin-left: 12.5vw;
+}
+
+.hr {
+  width: 60px;
+  height: 2px;
+  background: #89a4c9;
+  margin: 20px 0;
+}
+
+#about {
+  width: 100%;
+  padding: 100px 12.5vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about .img {
+  height: 25vw;
+  width: 25vw;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left bottom, right top, from(#f5c9d2), to(#d4999e));
+  background: linear-gradient(to top right, #f5c9d2, #d4999e);
+  margin-right: 12.5vw;
+}
+
+#about .text {
+  width: 37.5vw;
+}
+
+#about .text h3 {
+  font-size: 3em;
+  line-height: 1;
+}
+
+#about .text p {
+  font-size: 1em;
+  line-height: 1.618;
+}
+
+#schedule {
+  width: 100%;
+  padding: 100px 12.5vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #d2ddec;
+}
+
+#schedule .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50vw;
+}
+
+#schedule .text h3 {
+  font-size: 6em;
+  line-height: 1;
+  text-align: center;
+}
+
+#schedule .text p {
+  font-size: 1em;
+  line-height: 1.618;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#schedule .text a {
+  color: white;
 }
 /*# sourceMappingURL=styles.css.map */

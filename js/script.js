@@ -15,8 +15,30 @@ function scrollFunction() {
         $('.links').css('padding', '51px');
     }
 }
+function getX(event) //left position
+{
+    if(!event.pageX)
+    {
+        return event.clientX;
+    }
+    else
+    {
+        return event.pageX - (document.body.scrollLeft || document.documentElement.scrollLeft);
+    }
+}
 
+function getY(event) //top position
+{
+    if(event.pageY)
+    {
+        return event.pageY - (document.body.scrollTop || document.documentElement.scrollTop);
+    }
+    else
+    {
+        return event.clientY;
+    }
+}
 document.addEventListener("mousemove", e => {
-    document.getElementById('cursor').style.top = e.pageY + "px";
-    document.getElementById('cursor').style.left = e.pageX + "px";
+    document.getElementById('cursor').style.top = getY(event) + "px";
+    document.getElementById('cursor').style.left = getX(event) + "px";
 })
