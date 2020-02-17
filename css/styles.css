@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'din-2014', sans-serif;
+  font-family: MessinaSans, serif;
   text-decoration: none;
 }
 
@@ -71,7 +71,7 @@ body {
 
 #header .logo {
   height: 40px;
-  padding: 20px;
+  padding: 40px;
   -webkit-transition-duration: 400ms;
           transition-duration: 400ms;
 }
@@ -96,7 +96,7 @@ body {
           align-items: center;
   width: 180px;
   height: 18px;
-  padding: 31px 40px;
+  padding: 51px;
   -webkit-transition-duration: 400ms;
           transition-duration: 400ms;
 }
@@ -109,8 +109,6 @@ body {
 }
 
 .hero {
-  height: 100vh;
-  width: 100%;
   color: black;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -125,11 +123,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background: -webkit-gradient(linear, left top, right top, from(#6D819B), to(#89a4c9));
-  background: linear-gradient(to right, #6D819B, #89a4c9);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding-left: 0 12.5vw;
 }
 
 .hero .text {
@@ -146,6 +139,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 12.5vw;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, from(#6D819B), to(#89a4c9));
+  background: linear-gradient(to right, #6D819B, #89a4c9);
 }
 
 .hero .text h3, .hero .text h2 {
@@ -167,12 +167,10 @@ body {
 }
 
 .hero .img {
-  height: 25vw;
-  width: 25vw;
-  border-radius: 50%;
+  height: 100vh;
+  width: 50%;
   background: -webkit-gradient(linear, left bottom, right top, from(#f5c9d2), to(#d4999e));
   background: linear-gradient(to top right, #f5c9d2, #d4999e);
-  margin-left: 12.5vw;
 }
 
 .hr {
