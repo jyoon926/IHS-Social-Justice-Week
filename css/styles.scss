@@ -1,3 +1,4 @@
+$spacing: 60px;
 * {
     margin: 0;
     padding: 0;
@@ -13,13 +14,14 @@ body {
     overflow-x: hidden;
 }
 .button {
-    color: #8EAAD0;
-    background: black;
-    padding: 15px 30px;
+    color: black;
+    border: 1px solid black;
+    padding: 15px 35px;
     font-size: 1em;
     transition-duration: 400ms;
     &:hover {
-        background: #2b4c7d;
+        background: black;
+        color: white;
     }
 }
 #cursor {
@@ -36,10 +38,10 @@ body {
 }
 #header {
     z-index: 100;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 50%;
     height: 120px;
     background: white;
     display: flex;
@@ -48,9 +50,10 @@ body {
     align-items: center;
     background: none;
     transition-duration: 400ms;
+    padding: 0 $spacing;
+    box-sizing: border-box;
     .logo {
         height: 40px;
-        padding: 40px;
         transition-duration: 400ms;
         img {
             height: 40px;
@@ -59,17 +62,14 @@ body {
     ul {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
-        width: 180px;
         height: 18px;
-        padding: 51px;
         transition-duration: 400ms;
         a {
             font-size: 1em;
             color: black;
             line-height: 1;
-            margin: none;
+            margin-left: $spacing;
             
             &:hover {
             }
@@ -84,38 +84,37 @@ body {
     flex-direction: row;
     .text {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: flex-start;
         flex-direction: column;
         width: 50%;
         box-sizing: border-box;
-        padding-left: 12.5vw;
+        padding: $spacing;
         height: 100vh;
-        background: linear-gradient(to right, #6D819B, #89a4c9);
-        h3, h2 {
-            width: calc((100vw / 8) * 3);
-        }
-        h3 {
-            font-size: 2em;
-            font-weight: 400;
-            line-height: 1;
-            margin-bottom: 40px;
-        }
         h2 {
+            width: calc((100vw / 8) * 3);
             font-size: 5em;
-            line-height: 1;
+            line-height: 1.15;
             font-weight: 600;
-            margin-bottom: 40px;
+            margin-bottom: $spacing;
+        }
+        p {
+            margin-bottom: $spacing;
+            max-width: 600px;
+            font-size: 1em;
+            line-height: 1.618;
         }
     }
     .img {
         height: 100vh;
         width: 50%;
-        background: linear-gradient(to top right, #f5c9d2, #d4999e);
+        background: url(../img/march.jpg);
+        background-size: cover;
+        background-position: center center;
     }
 }
 .hr {
-    width: 60px;
+    width: $spacing;
     height: 2px;
     background: #89a4c9;
     margin: 20px 0;
@@ -174,7 +173,6 @@ body {
             margin-bottom: 40px;
         }
         a {
-            color: white;
         }
     }
 }

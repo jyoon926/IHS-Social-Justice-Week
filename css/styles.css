@@ -16,16 +16,17 @@ body {
 }
 
 .button {
-  color: #8EAAD0;
-  background: black;
-  padding: 15px 30px;
+  color: black;
+  border: 1px solid black;
+  padding: 15px 35px;
   font-size: 1em;
   -webkit-transition-duration: 400ms;
           transition-duration: 400ms;
 }
 
 .button:hover {
-  background: #2b4c7d;
+  background: black;
+  color: white;
 }
 
 #cursor {
@@ -45,10 +46,10 @@ body {
 
 #header {
   z-index: 100;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 50%;
   height: 120px;
   background: white;
   display: -webkit-box;
@@ -67,11 +68,13 @@ body {
   background: none;
   -webkit-transition-duration: 400ms;
           transition-duration: 400ms;
+  padding: 0 60px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #header .logo {
   height: 40px;
-  padding: 40px;
   -webkit-transition-duration: 400ms;
           transition-duration: 400ms;
 }
@@ -88,15 +91,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 180px;
   height: 18px;
-  padding: 51px;
   -webkit-transition-duration: 400ms;
           transition-duration: 400ms;
 }
@@ -105,7 +103,7 @@ body {
   font-size: 1em;
   color: black;
   line-height: 1;
-  margin: none;
+  margin-left: 60px;
 }
 
 .hero {
@@ -129,9 +127,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -142,35 +140,31 @@ body {
   width: 50%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-left: 12.5vw;
+  padding: 60px;
   height: 100vh;
-  background: -webkit-gradient(linear, left top, right top, from(#6D819B), to(#89a4c9));
-  background: linear-gradient(to right, #6D819B, #89a4c9);
-}
-
-.hero .text h3, .hero .text h2 {
-  width: calc((100vw / 8) * 3);
-}
-
-.hero .text h3 {
-  font-size: 2em;
-  font-weight: 400;
-  line-height: 1;
-  margin-bottom: 40px;
 }
 
 .hero .text h2 {
+  width: calc((100vw / 8) * 3);
   font-size: 5em;
-  line-height: 1;
+  line-height: 1.15;
   font-weight: 600;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+}
+
+.hero .text p {
+  margin-bottom: 60px;
+  max-width: 600px;
+  font-size: 1em;
+  line-height: 1.618;
 }
 
 .hero .img {
   height: 100vh;
   width: 50%;
-  background: -webkit-gradient(linear, left bottom, right top, from(#f5c9d2), to(#d4999e));
-  background: linear-gradient(to top right, #f5c9d2, #d4999e);
+  background: url(../img/march.jpg);
+  background-size: cover;
+  background-position: center center;
 }
 
 .hr {
@@ -272,9 +266,5 @@ body {
   line-height: 1.618;
   text-align: center;
   margin-bottom: 40px;
-}
-
-#schedule .text a {
-  color: white;
 }
 /*# sourceMappingURL=styles.css.map */
