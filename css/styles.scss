@@ -1,4 +1,10 @@
 $spacing: 60px;
+$orange: #f47631;
+$yellow: #fbd350;
+$green: #4e9048;
+$pink: #f58d91;
+$blue: #4faab7;
+$bg: #fff7e3;
 * {
     margin: 0;
     padding: 0;
@@ -9,20 +15,16 @@ html {
     overflow-x: hidden;
     font-size: 18px;
     scroll-behavior: smooth;
+    background: $bg;
 }
 body {
     overflow-x: hidden;
 }
 .button {
     color: black;
-    border: 1px solid black;
-    padding: 15px 35px;
+    padding: 17px 40px;
     font-size: 1em;
     transition-duration: 400ms;
-    &:hover {
-        background: black;
-        color: white;
-    }
 }
 #cursor {
     height: 50vw;
@@ -69,110 +71,99 @@ body {
             font-size: 1em;
             color: black;
             line-height: 1;
-            margin-left: $spacing;
-            
+            transition-duration: 300ms;
+            border-bottom: 2px solid rgba(0,0,0,0);
+            padding-bottom: 2px;
             &:hover {
+                border-bottom: 2px solid #000;
+            }
+            &:last-child {
+                margin-left: $spacing;
             }
         }
-    }
-}
-.hero {
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    .text {
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-start;
-        flex-direction: column;
-        width: 50%;
-        box-sizing: border-box;
-        padding: $spacing;
-        height: 100vh;
-        h2 {
-            width: calc((100vw / 8) * 3);
-            font-size: 5em;
-            line-height: 1.15;
-            font-weight: 600;
-            margin-bottom: $spacing;
-        }
-        p {
-            margin-bottom: $spacing;
-            max-width: 600px;
-            font-size: 1em;
-            line-height: 1.618;
-        }
-    }
-    .img {
-        height: 100vh;
-        width: 50%;
-        background: url(../img/march.jpg);
-        background-size: cover;
-        background-position: center center;
     }
 }
 .hr {
     width: $spacing;
     height: 2px;
-    background: #89a4c9;
+    background: $orange;
     margin: 20px 0;
+    padding: 0;
 }
-#about {
-    width: 100%;
-    padding: 100px 12.5vw;
+footer {
+    width: 100vw;
+    background: black;
+    height: 100px;
     box-sizing: border-box;
+    padding: 0 60px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    .img {
-        height: 25vw;
-        width: 25vw;
-        border-radius: 50%;
-        background: linear-gradient(to top right, #f5c9d2, #d4999e);
-        margin-right: 12.5vw;
+    p, a {
+        color: $bg;
     }
-    .text {
-        width: 37.5vw;
-        h3 {
-            font-size: 3em;
-            line-height: 1;
-        }
+    a {
+        text-decoration: underline;
+    }
+}
+#top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    z-index: 1;
+    color: black;
+    transition-duration: 300ms;
+    border-bottom: 2px solid rgba(0,0,0,0);
+    opacity: 0;
+    &:hover {
+        border-bottom: 2px solid #000;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    #header {
+        width: 100%;
+        height: 100px;
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    footer {
+        width: 100vw;
+        background: black;
+        height: auto;
+        box-sizing: border-box;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
         p {
-            font-size: 1em;
-            line-height: 1.618;
+            line-height: 1.5;
         }
     }
 }
-#schedule {
-    width: 100%;
-    padding: 100px 12.5vw;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #d2ddec;
-    .text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 50vw;
-        h3 {
-            font-size: 6em;
-            line-height: 1;
-            text-align: center;
+@media screen and (max-width: 500px) {
+    #header {
+        .logo {
+            height: 30px;
+            img {
+                height: 30px;
+            }
         }
-        p {
-            font-size: 1em;
-            line-height: 1.618;
-            text-align: center;
-            margin-bottom: 40px;
+        ul {
+            a {
+                font-size: .8em;
+                &:last-child {
+                    margin-left: 30px;
+                }
+            }
         }
-        a {
-        }
+    }
+    #top {
+        font-size: .8em;
     }
 }

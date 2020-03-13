@@ -1,0 +1,221 @@
+$spacing: 60px;
+$orange: #f47631;
+$yellow: #fbd350;
+$green: #4e9048;
+$pink: #f58d91;
+$blue: #4faab7;
+$bg: #fff7e3;
+.hero {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    .text {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 50%;
+        box-sizing: border-box;
+        padding: $spacing;
+        height: 100vh;
+        h2 {
+            width: calc((100vw / 8) * 3);
+            font-size: 5em;
+            line-height: 1.15;
+            font-weight: 600;
+            margin-bottom: $spacing;
+        }
+        p {
+            margin-bottom: $spacing;
+            max-width: 600px;
+            font-size: 1em;
+            line-height: 1.618;
+        }
+        a {
+            background: $orange;
+        }
+    }
+    .img {
+        height: 100vh;
+        width: 50%;
+        background-image: url(../img/march.jpg);
+        background-size: cover;
+        background-position: center center;
+        z-index: 2;
+        background-color: $bg;
+        background-blend-mode: multiply;
+    }
+}
+#about {
+    width: 100%;
+    padding: 100px 12.5vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    .img {
+        height: 25vw;
+        width: 25vw;
+        //border-radius: 50%;
+        background: $blue;
+        margin-right: 12.5vw;
+    }
+    .text {
+        width: 37.5vw;
+        h4 {
+            font-size: 3em;
+            line-height: 1;
+        }
+        p {
+            font-size: 1em;
+            line-height: 1.618;
+        }
+    }
+}
+#schedule {
+    width: 100%;
+    padding: 60px 12.5vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50vw;
+        h3 {
+            font-size: 6em;
+            line-height: 1;
+            text-align: center;
+        }
+        p {
+            font-size: 1em;
+            line-height: 1.618;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        a {
+            background: $orange;
+        }
+    }
+}
+#videos {
+    width: 100%;
+    padding: 100px 12.5vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50vw;
+        h3 {
+            font-size: 6em;
+            line-height: 1;
+            text-align: center;
+        }
+        p {
+            font-size: 1em;
+            line-height: 1.618;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        a {
+            background: $orange;
+        }
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    .hero {
+        .text {
+            h2 {
+                margin-bottom: 30px;
+            }
+            p {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    h2 {
+        font-size: 4em !important;
+    }
+    h4 {
+        font-size: 3em !important;
+    }
+    h3 {
+        font-size: 5em !important;
+    }
+}
+@media screen and (max-width: 1300px) {
+    h2 {
+        font-size: 3em !important;
+    }
+    h4 {
+        font-size: 3em !important;
+    }
+    h3 {
+        font-size: 4em !important;
+    }
+    #schedule {
+        padding: 0px 12.5vw !important;
+    }
+}
+@media screen and (max-width: 1150px) {
+    .hero {
+        flex-direction: column;
+        .text {
+            width: 100%;
+            padding: 30px;
+            padding-bottom: 80px;
+            height: auto;
+            h2 {
+                width: 100%;
+                margin-top: 150px;
+            }
+            p {
+                margin-bottom: $spacing;
+            }
+            a {
+                background: $orange;
+            }
+        }
+        .img {
+            height: 300px;
+            width: 100%;
+        }
+    }
+    #about, #schedule, #videos {
+        width: 100%;
+        padding: 100px 30px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .img {
+            display: none;
+        }
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        h4, h3 {
+            font-size: 3em !important;
+        }
+    }
+}
